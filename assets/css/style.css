@@ -8,14 +8,16 @@
   --font-primary: "Inter", sans-serif;
   --height-player: 90px;
   --width-sidebar: 50px;
+  --font-size: 14px;
 }
 
 .btn-style {
   color: white;
-  border: 1.5px solid white;
+  border: 1px solid white;
   background-color: transparent;
   padding: 10px 20px;
   border-radius: 20px;
+  font-size: 0.7rem;
 }
 
 /* ----------------------------------- DEBUG -----------------------------------*/
@@ -41,7 +43,7 @@
 }
 
 html {
-  font-size: 15px;
+  font-size: var(--font-size);
 }
 
 body {
@@ -155,6 +157,10 @@ h5 {
   text-transform: uppercase;
 }
 
+.mobile-invisible {
+  display: none;
+}
+
 /* ----------------------------------- LAYOUT FINO A 576px -----------------------------------*/
 
 #top-container {
@@ -171,6 +177,9 @@ h5 {
   width: var(--width-sidebar);
   background-color: var(--tertiary-color);
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }
 
 #main-content {
@@ -194,16 +203,54 @@ h5 {
   padding: 1rem;
 }
 
-/* ------- LAYOUT MOBILE DA 577px A 768px ------- */
-@media screen and (min-width: 577px) {
+/* ------- LAYOUT MOBILE DA 639px A 878px ------- */
+@media screen and (min-width: 639px) {
   :root {
     --width-sidebar: 200px;
   }
+
+  .mobile-invisible {
+    display: block;
+  }
 }
 
-/* -------  LAYOUT TABLET DA 769px A 992px ------- */
-@media screen and (min-width: 769px) {
+/* -------  LAYOUT TABLET DA 878px A 1440px ------- */
+@media screen and (min-width: 878px) {
+  :root {
+    --width-sidebar: 200px;
+    --font-size: 16px;
+  }
 }
-/* ------- LAYOUT DESKTOP DA 993px A INFINITO ------- */
-@media screen and (min-width: 993px) {
+/* ------- LAYOUT DESKTOP DA 1440px A INFINITO ------- */
+@media screen and (min-width: 1440px) {
+}
+
+/* ----------------------------------- SIDEBAR FINO A 576px -----------------------------------*/
+
+.logo {
+  padding-bottom: 20px;
+}
+
+.list-icon {
+}
+
+.list-icon li {
+  padding-bottom: 10px;
+}
+
+/* ------- SIDEBAR MOBILE DA 639px A 878px ------- */
+@media screen and (min-width: 639px) {
+  .mobile-invisible {
+    display: block;
+  }
+
+  #sidebar img {
+    display: inline;
+    width: 10%;
+  }
+
+  #sidebar span {
+    display: inline;
+    padding-left: 10px;
+  }
 }
