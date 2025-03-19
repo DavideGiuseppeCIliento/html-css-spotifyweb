@@ -1,11 +1,21 @@
 /* -----------------------------------GLOBALI----------------------------------- */
 
 :root {
-  --primary-color: #7c69a4;
-  --secondary-color: #ff9613;
+  --primary-color: #141922;
+  --secondary-color: #282828;
+  --tertiary-color: #000;
   --background-body: #f6f5f3;
-  --font-primary: "Montserrat", "Helvetica Neue", sans-serif;
-  --font-secondary: "Nerko One", cursive;
+  --font-primary: "Inter", sans-serif;
+  --height-player: 90px;
+  --width-sidebar: 50px;
+}
+
+.btn-style {
+  color: white;
+  border: 1.5px solid white;
+  background-color: transparent;
+  padding: 10px 20px;
+  border-radius: 20px;
 }
 
 /* ----------------------------------- DEBUG -----------------------------------*/
@@ -31,12 +41,14 @@
 }
 
 html {
-  font-size: 17px;
+  font-size: 15px;
 }
 
 body {
   background-color: #f5f8fa;
   font-family: "Arial", sans-serif;
+  color: white;
+  font-family: var(--font-primary);
 }
 
 header {
@@ -67,7 +79,10 @@ a {
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--primary-color);
 }
 
 .flex-element {
@@ -136,15 +151,59 @@ h5 {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
 }
 
-/* ----------------------------------- HEADER MOBILE FINO A 576px -----------------------------------*/
-
-/* ------- HEADER LARGE MOBILE DA 577px A 768px ------- */
-@media screen and (min-width: 577px) {
+.font-upper {
+  text-transform: uppercase;
 }
 
-/* -------  HEADER TABLET DA 769px A 992px ------- */
+/* ----------------------------------- LAYOUT FINO A 576px -----------------------------------*/
+
+#top-container {
+  flex: 1 1 auto;
+  display: flex;
+}
+
+#player {
+  height: var(--height-player);
+  background-color: var(--secondary-color);
+}
+
+#sidebar {
+  width: var(--width-sidebar);
+  background-color: var(--tertiary-color);
+  overflow: auto;
+}
+
+#main-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+#main-content-header {
+  background-color: rgba(0, 0, 0, 0.498);
+  height: var(--height-player);
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 1rem;
+}
+
+#content {
+  flex: 1 1 auto;
+  overflow: auto;
+  padding: 1rem;
+}
+
+/* ------- LAYOUT MOBILE DA 577px A 768px ------- */
+@media screen and (min-width: 577px) {
+  :root {
+    --width-sidebar: 200px;
+  }
+}
+
+/* -------  LAYOUT TABLET DA 769px A 992px ------- */
 @media screen and (min-width: 769px) {
 }
-/* ------- HEADER DESKTOP DA 993px A INFINITO ------- */
+/* ------- LAYOUT DESKTOP DA 993px A INFINITO ------- */
 @media screen and (min-width: 993px) {
 }
