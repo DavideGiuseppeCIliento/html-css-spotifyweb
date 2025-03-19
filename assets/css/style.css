@@ -271,7 +271,7 @@ h5 {
 
 /* ------- SIDEBAR MOBILE DA 639px A 878px ------- */
 @media screen and (min-width: 639px) {
-  #sidebar img {
+  #sidebar .list-icon img {
     display: inline;
     width: 10%;
   }
@@ -283,5 +283,9 @@ h5 {
 
   #sidebar .playlist i {
     font-size: 30px;
+  }
+
+  #sidebar .logo .big-logo {
+    width: 60%;
   }
 }
