@@ -8,7 +8,7 @@
   --font-primary: "Inter", sans-serif;
   --height-player: 90px;
   --width-sidebar: 50px;
-  --font-size: 14px;
+  --font-size: 13px;
 }
 
 .btn-style {
@@ -157,7 +157,11 @@ h5 {
   text-transform: uppercase;
 }
 
-.mobile-invisible {
+.mobile-view {
+  display: block;
+}
+
+.tablet-view {
   display: none;
 }
 
@@ -209,7 +213,11 @@ h5 {
     --width-sidebar: 200px;
   }
 
-  .mobile-invisible {
+  .mobile-view {
+    display: none;
+  }
+
+  .tablet-view {
     display: block;
   }
 }
@@ -218,7 +226,7 @@ h5 {
 @media screen and (min-width: 878px) {
   :root {
     --width-sidebar: 200px;
-    --font-size: 16px;
+    --font-size: 14px;
   }
 }
 /* ------- LAYOUT DESKTOP DA 1440px A INFINITO ------- */
@@ -240,10 +248,6 @@ h5 {
 
 /* ------- SIDEBAR MOBILE DA 639px A 878px ------- */
 @media screen and (min-width: 639px) {
-  .mobile-invisible {
-    display: block;
-  }
-
   #sidebar img {
     display: inline;
     width: 10%;
