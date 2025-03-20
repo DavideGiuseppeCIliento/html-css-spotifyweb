@@ -169,18 +169,30 @@ h5 {
   color: rgba(212, 212, 212, 0.593);
 }
 
+.light-font:hover {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
 .white-font {
   color: white;
+  cursor: pointer;
 }
 
 .padding-zero {
   padding: 0;
+}
+
+.hover-green:hover {
+  color: #adff2e;
+  cursor: pointer;
 }
 /* ----------------------------------- LAYOUT FINO A 576px -----------------------------------*/
 
 #top-container {
   flex: 1 1 auto;
   display: flex;
+  height: calc(100vh - var(--height-player));
 }
 
 #player {
@@ -201,6 +213,7 @@ h5 {
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
+  width: calc(100vw - var(--width-sidebar));
 }
 
 #main-content-header {
@@ -254,11 +267,14 @@ h5 {
 }
 
 .list-icon li {
-  padding-bottom: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  border-left: 3px solid transparent;
 }
 
 .playlist li {
-  padding-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .playlist {
@@ -269,11 +285,44 @@ h5 {
   padding-bottom: 10px;
 }
 
+#icon-user {
+  margin-top: auto;
+}
+
+#icon-user img {
+  width: 50%;
+  margin: 10px auto;
+}
+
+#icon-user li {
+  text-align: center;
+}
+
+#icon-user i {
+  font-size: 1.5rem;
+}
+
+.underline {
+  height: 0;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  margin: 10px 0;
+}
+
 /* ------- SIDEBAR MOBILE DA 639px A 878px ------- */
 @media screen and (min-width: 639px) {
   #sidebar .list-icon img {
     display: inline;
     width: 10%;
+  }
+
+  .list-icon li {
+    display: flex;
+    align-items: center;
+  }
+
+  .list-icon li:hover {
+    border-left: 3px solid #adff2e;
   }
 
   #sidebar span {
@@ -287,5 +336,22 @@ h5 {
 
   #sidebar .logo .big-logo {
     width: 60%;
+  }
+
+  #icon-user img {
+    display: inline-block;
+    width: 10%;
+    margin: 0;
+  }
+
+  #icon-user i {
+    display: inline-block;
+    font-size: 20px;
+  }
+
+  #icon-user li {
+    text-align: left;
+    display: flex;
+    align-items: center;
   }
 }
