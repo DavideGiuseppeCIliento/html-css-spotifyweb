@@ -20,6 +20,28 @@
   font-size: 0.7rem;
 }
 
+/* Cambia la larghezza della scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Cambia il colore dello sfondo della scrollbar */
+::-webkit-scrollbar-track {
+  background: #f1f1f122;
+  border-radius: 10px;
+}
+
+/* Cambia il colore del cursore (thumb) */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Cambia il colore della scrollbar quando l'utente ci passa sopra */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
 /* ----------------------------------- DEBUG -----------------------------------*/
 
 .db-color1 {
@@ -275,7 +297,7 @@ h5 {
   margin-bottom: 15px;
   display: flex;
   align-items: center;
-  border-left: 3px solid transparent;
+  border-left: 4px solid transparent;
 }
 
 .playlist li {
@@ -326,13 +348,17 @@ h5 {
     width: 10%;
   }
 
+  #sidebar li {
+    padding-left: 6px;
+  }
+
   .list-icon li {
     display: flex;
     align-items: center;
   }
 
   .list-icon li:hover {
-    border-left: 3px solid #adff2e;
+    border-left: 4px solid #adff2e;
   }
 
   #sidebar span {
