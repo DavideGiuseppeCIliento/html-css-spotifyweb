@@ -201,6 +201,8 @@ h5 {
   padding: 0.4rem;
   display: flex;
   justify-content: space-between;
+  font-size: 0.7rem;
+  gap: 1rem;
 }
 
 #sidebar {
@@ -360,10 +362,6 @@ h5 {
 }
 
 /* ----------------------------------- PLAYER FINO A 576px -----------------------------------*/
-
-#player {
-  font-size: 0.7rem;
-}
 
 #player i {
   font-size: 1rem;
