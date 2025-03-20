@@ -198,6 +198,9 @@ h5 {
 #player {
   height: var(--height-player);
   background-color: var(--secondary-color);
+  padding: 0.4rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 #sidebar {
@@ -353,5 +356,97 @@ h5 {
     text-align: left;
     display: flex;
     align-items: center;
+  }
+}
+
+/* ----------------------------------- PLAYER FINO A 576px -----------------------------------*/
+
+#player {
+  font-size: 0.7rem;
+}
+
+#player i {
+  font-size: 1rem;
+}
+
+.music-name,
+.option-player,
+.volume {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.music-name {
+  flex: 0 1 auto;
+}
+
+.volume {
+  justify-content: end;
+  flex: 0 1 auto;
+}
+
+.option-player {
+  flex: 1 1 auto;
+  display: flex;
+}
+
+.volume {
+  flex: 1 1 auto;
+  display: flex;
+}
+
+.music-name img {
+  width: 40px;
+}
+
+.music-name i {
+  padding: 0.1rem;
+}
+
+.name-artist {
+  font-size: 0.8rem;
+}
+
+.volume li {
+  display: inline-block;
+  align-items: center;
+}
+.sound {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.light-bar {
+  width: 6rem;
+  height: 4px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.dark-bar {
+}
+
+/* ------- SIDEBAR MOBILE DA 639px A 878px ------- */
+@media screen and (min-width: 639px) {
+}
+
+/* -------  LAYOUT TABLET DA 878px A 1440px ------- */
+@media screen and (min-width: 878px) {
+}
+/* ------- LAYOUT DESKTOP DA 1440px A INFINITO ------- */
+@media screen and (min-width: 1440px) {
+  #player {
+    font-size: 0.8rem;
+  }
+
+  .music-name img {
+    width: 50px;
+  }
+
+  .music-name i {
+    padding: 1rem;
   }
 }
