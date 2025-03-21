@@ -582,6 +582,27 @@ h5 {
 }
 
 .music-image-recently {
+  position: relative;
+}
+
+.music-image-recently:hover .overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.689);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+
+.icon-overlay {
+  font-size: 60px;
 }
 
 .info-music-recently {
@@ -592,11 +613,12 @@ h5 {
 .recently {
 }
 
-#content .created-by h4 {
+.padding-separator {
   padding-bottom: 10px;
 }
 
-.popolar {
+.popolar img {
+  border-radius: 50%;
 }
 
 /* ------- SIDEBAR MOBILE DA 639px A 878px ------- */
