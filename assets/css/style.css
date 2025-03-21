@@ -255,7 +255,10 @@ h5 {
 #content {
   flex: 1 1 auto;
   overflow: auto;
-  padding: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 /* ------- LAYOUT MOBILE DA 639px A 878px ------- */
@@ -545,4 +548,64 @@ h5 {
   .music-name i {
     padding: 1rem;
   }
+}
+
+/* ----------------------------------- CONTENT FINO A 576px -----------------------------------*/
+
+.option-music {
+  display: flex;
+  justify-content: center;
+}
+
+.option-music {
+  text-align: center;
+}
+
+.option-music li {
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+.container {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 1.2rem 0;
+}
+
+.card {
+  max-width: calc(100% / 2 - 5px);
+}
+
+.music-image-recently {
+}
+
+.info-music-recently {
+  text-align: center;
+  padding: 10px;
+}
+
+.recently {
+}
+
+#content .created-by h4 {
+  padding-bottom: 10px;
+}
+
+.popolar {
+}
+
+/* ------- SIDEBAR MOBILE DA 639px A 878px ------- */
+@media screen and (min-width: 639px) {
+}
+
+/* -------  LAYOUT TABLET DA 878px A 1440px ------- */
+@media screen and (min-width: 878px) {
+}
+/* ------- LAYOUT DESKTOP DA 1440px A INFINITO ------- */
+@media screen and (min-width: 1440px) {
 }
