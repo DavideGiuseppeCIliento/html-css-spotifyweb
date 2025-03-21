@@ -563,7 +563,31 @@ h5 {
 
 .option-music li {
   display: inline-block;
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
+  border-bottom: 4px solid transparent;
+  border-width: 20%;
+  position: relative;
+}
+
+/* .option-music li:hover {
+  border-bottom: 4px solid greenyellow;
+} */
+
+.option-music li::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 40%; /* Larghezza più corta */
+  height: 4px;
+  background-color: greenyellow;
+  transform: translateX(-50%); /* Centra l'elemento */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.option-music li:hover::before {
+  opacity: 1;
 }
 
 .container {
@@ -579,6 +603,7 @@ h5 {
 
 .card {
   max-width: calc(100% / 2 - 5px);
+  cursor: pointer;
 }
 
 .music-image-recently {
@@ -599,6 +624,10 @@ h5 {
   left: 0;
   right: 0;
   display: none;
+}
+
+.overlay.round {
+  border-radius: 50%;
 }
 
 .icon-overlay {
@@ -623,6 +652,9 @@ h5 {
 
 /* ------- SIDEBAR MOBILE DA 639px A 878px ------- */
 @media screen and (min-width: 639px) {
+  .card {
+    max-width: calc(100% / 4 - 7.5px);
+  }
 }
 
 /* -------  LAYOUT TABLET DA 878px A 1440px ------- */
@@ -630,4 +662,7 @@ h5 {
 }
 /* ------- LAYOUT DESKTOP DA 1440px A INFINITO ------- */
 @media screen and (min-width: 1440px) {
+  .card {
+    max-width: calc(100% / 6 - 25px);
+  }
 }
